@@ -10,8 +10,9 @@ export class ExamplePage extends BasePage {
         // Tek yer: Map. Field'lar yok!
         this.elementMap = {
             'login': page.getByRole('link', {name: 'Login'}),
-            'register': page.locator('a[href="/register"]')
-
+            'email': page.getByRole('textbox', { name: 'Email:' }),
+            'password': page.getByRole('textbox', { name: 'Password:' }),
+             'submit': page.getByRole('button', { name: 'Login' })
         };
     }
 
