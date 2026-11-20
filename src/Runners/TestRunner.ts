@@ -14,15 +14,13 @@ function findProjectRoot(startDir: string): string {
 
 // process.argv[1] = çalıştırılan dosyanın tam yolu (ESM'de de CJS'de de var)
 const projectRoot = findProjectRoot(path.dirname(path.resolve(process.argv[1])));
-
-const featurePath = 'src/tests/features/Student/checkbox.feature';
-const tagName = '@CHECKBOX';
+const tagName = '@EX005LoginTestTC01';
 const slowMoMs = 500;
 
 console.log(`🚀 Yavaş mod başlatılıyor (slowMo=${slowMoMs}ms)...\n`);
 
 exec(
-    `npx cucumber-js "${featurePath}" --tags "${tagName}"`,
+    `npx cucumber-js  --tags "${tagName}"`,
     {cwd: projectRoot, env: {...process.env, SLOW_MO: String(slowMoMs)}},
     (error, stdout, stderr) => {
         if (stdout) console.log(stdout);
@@ -39,3 +37,5 @@ exec(
 // npx cucumber-js --tags "@TagAdi"
 
 // npx cucumber-js --tags "@ST001LylRegisterTC01"
+
+// npx cucumber-js --tags "@US007AdDynamicRegisterAd01"

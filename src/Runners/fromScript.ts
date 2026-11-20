@@ -1,4 +1,4 @@
-const TAG = "@ST001LylRegisterTC01"; // <-- SADECE BURAYI DEĞİŞTİRİN
+const TAG = "@EX005LoginTestTC01"; // <-- SADECE BURAYI DEĞİŞTİRİN
 
 import { execSync } from "child_process";
 import fs from "fs";
