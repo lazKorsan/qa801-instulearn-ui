@@ -8,14 +8,14 @@ test('EX005LoginTest TC01', async ({ page }) => {
 
     // env dosysindan deger cekme
     const url= process.env.BASE_URL!;
-    await page.goto('https://qa.instulearn.com/login');
+    await page.goto(url);
 
     LoggerHelper.logInfo(`Example kullanicisi "${url}" sayfasina gider`);
 
 
 
 
-   // await page.getByRole('link', { name: 'Login' }).click();
+    await page.getByRole('link', { name: 'Login' }).click();
 
     const mail=process.env.MAIL!;
     await page.getByRole('textbox', { name: 'Email:' }).fill(mail);
