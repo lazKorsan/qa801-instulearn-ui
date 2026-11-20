@@ -23,7 +23,7 @@
   },
   "student": {
     "paths": [
-      "src/tests/features/Student/US001StLoginTest.feature"
+      "src/features/Student/US001StLoginTest.feature"
     ],
     "require": [
       "dotenv/config",

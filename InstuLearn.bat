@@ -7,7 +7,7 @@ cls
 echo ==================== PLAYWRIGHT KOMUTLARI ====================
 echo.
 echo 1. Test UI'ı ac (npx playwright test --ui)
-echo 2. Codegen baslat (npx playwright codegen https://qa.loyalfriendcare.com/en)
+echo 2. Codegen baslat (npx playwright codegen https://qa.instulearn.com/)
 echo 3. Tum testleri calistir (npx playwright test)
 echo 4. Belirli testi calistir
 echo 5. Report ac (npx playwright show-report)
@@ -46,9 +46,9 @@ goto menu
 
 :codegen
 echo.
-echo Calistiriliyor: npx playwright codegen https://qa.loyalfriendcare.com/en
+echo Calistiriliyor: npx playwright codegen https://qa.instulearn.com/
 echo ------------------------------------------------
-npx playwright codegen https://qa.loyalfriendcare.com/en
+npx playwright codegen https://qa.instulearn.com/
 echo ------------------------------------------------
 echo Komut tamamlandi!
 pause
