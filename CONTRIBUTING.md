@@ -1,0 +1,77 @@
+# 📺 Proje Kurulum & Eğitim Videoları
+
+Aşağıda projenin kurulumu, test yazımı ve yardımcı araçların kullanımı ile ilgili kısa eğitim videolarını bulabilirsiniz. Her görsel YouTube videosuna linklidir — tıklayarak videoyu YouTube'da izleyebilirsiniz.
+
+
+
+---
+
+## Videolar
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=Bv_s4xKIuQo&t=346s" target="_blank">
+        <img src="https://img.youtube.com/vi/PJFdHEnhCP0/hqdefault.jpg" alt="Team 169 UI project Kurulum Videosu" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Team 169 UI project Kurulum Videosu</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=7omwYDPrCkQ&t=1588s" target="_blank">
+        <img src="https://img.youtube.com/vi/8u59BXHuz_c/hqdefault.jpg" alt="Team 169 UI Page, Steps ve Feature Dosyasi olusturma" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Playwright TypeScript native test</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=_qODebxx7Ts" target="_blank">
+        <img src="https://img.youtube.com/vi/ulyYLlUVMDM/hqdefault.jpg" alt="Team 169 ConfigReader Kullanimi" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Playwright TypeScript projenin github a yuklenmesi.</b></sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=btd2-_thA8c" target="_blank">
+        <img src="https://img.youtube.com/vi/mLd7xsdqsAs/hqdefault.jpg" alt="EnumList Hazir Sablon Olusturma" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Playwright TypeScript framework Cucumber eklenmesi, feature ve step dosyalarinin olusturulmasi</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=aVBnZf6uhFc" target="_blank">
+        <img src="https://img.youtube.com/vi/hccqO8w6hzo/hqdefault.jpg" alt="UI Framework İlk Testim" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Playwright TypeScript Cucumber Testlerinin kosulmasi</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=ra-aSWqZ3aM&t=16s" target="_blank">
+        <img src="https://img.youtube.com/vi/47r2AMjFUpE/hqdefault.jpg" alt="UI Modern Loglam (LoginPlugin Kullanimi)" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Çok katmanlı test framework'üne Playwright TypeScript UI projesi eklenmesi</b></sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=ttarDV5sm1g" target="_blank">
+        <img src="https://img.youtube.com/vi/ttarDV5sm1g/hqdefault.jpg" alt="IntelliJ Otomatik Import & Actions on Save" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>IntelliJ Otomatik Import (Auto Import & Actions on Save)</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=qciCOB48oDM" target="_blank">
+        <img src="https://img.youtube.com/vi/qciCOB48oDM/hqdefault.jpg" alt="github islemleri" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>UI github islemleri</b></sub>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=DeDxyAubbY4" target="_blank">
+        <img src="https://img.youtube.com/vi/DeDxyAubbY4/hqdefault.jpg" alt="Jira workflow" style="max-width:320px;width:100%;height:auto;">
+      </a><br/>
+      <sub><b>Jira workflow</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
+
