@@ -1,7 +1,7 @@
 {
   "name": "qa801-instulearn-ui",
   "version": "1.0.0",
-  "description": "Bu proje, **Playwright**, **TypeScript** ve **Cucumber** framework'leri kullanılarak hazırlanan bir test otomasyon projesidir. Projeyi bilgisayarınıza kopyalayıp testleri sorunsuz bir şekilde koşturabilmek için aşağıdaki adımları sırasıyla takip etmeniz gerekmektedir.",
+  "description": "Bu proje, *Playwright, **TypeScript* ve *Cucumber* framework'leri kullanılarak hazırlanan bir test otomasyon projesidir. Projeyi bilgisayarınıza kopyalayıp testleri sorunsuz bir şekilde koşturabilmek için aşağıdaki adımları sırasıyla takip etmeniz gerekmektedir.",
   "scripts": {
     "build": "tsc",
     "test": "playwright test",
@@ -9,7 +9,7 @@
     "allure:generate": "allure generate ./target/allure-results -o ./target/allure-report --clean",
     "allure:open": "allure open ./target/allure-report",
     "allure:clean": "rimraf ./target/allure-results ./target/allure-report",
-    "runner:all": "cucumber-js \"src/features/**/*.feature\"",
+    "runner:all": "cucumber-js \"src/features/*/.feature\"",
     "runner:smoke": "cucumber-js --profile smoke",
     "runner:regression": "cucumber-js --profile regression",
     "runner:testrunner": "ts-node src/Runners/TestRunner.ts",
@@ -17,6 +17,7 @@
     "runner:admin": "ts-node src/Runners/AdminRunner.ts",
     "runner:history": "ts-node src/Runners/HistoryRunner.ts",
     "runner:visitor": "ts-node src/Runners/VisitorRunner.ts",
+    "runner:from": "ts-node src/Runners/fromScript.ts",
     "test:report": "npm run test && npm run allure:generate && npm run allure:open",
     "report:clean": "rimraf ./target",
     "scripts:tree": "npx tree-node-cli -I \\\"node_modules|dist|.git|playwright-report|test-results\\\" -o proje-yapisi.txt\""
@@ -27,7 +28,7 @@
     ],
     "require": [
       "dotenv/config",
-      "src/step-definitions/**/*.ts"
+      "src/step-definitions/*/.ts"
     ],
     "requireModule": [
       "tsconfig-paths/register",
