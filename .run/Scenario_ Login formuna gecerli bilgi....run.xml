@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Scenario: Login formuna gecerli bilgi..." type="cucumber.js" factoryName="Cucumber.js">
+    <option name="myFilePath" value="$PROJECT_DIR$/src/features/Example/EX005LoginTest.feature" />
+    <option name="myNameFilter" value="^Login formuna gecerli bilgiler girilip Login butonuna tiklandiginda sisteme giris yapilabilmeli\.$" />
+    <option name="cucumberJsArguments" value="" />
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>

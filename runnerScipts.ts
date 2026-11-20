@@ -1,4 +1,4 @@
-const TAG = "@ST001LylRegisterTC01";
+const TAG = "@EX005LoginTestTC01";
 
 import { execSync } from "child_process";
 
