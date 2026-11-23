@@ -386,6 +386,3 @@ Kurulum işlemleri tamamlandıktan sonra, projedeki hazır betikleri (scripts) k
 
 ## 📝 Notlar
 *   Projede ortam değişkenleri için `dotenv` kullanılmaktadır. Eğer gerekliyse, proje kök dizininde `.env` dosyası oluşturup gerekli tanımlamaları yapmayı unutmayın.
-#   q a 8 0 1 - i n s t u l e a r n - u i 
- 
- 
