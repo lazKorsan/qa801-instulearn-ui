@@ -4,6 +4,7 @@
   "description": "Bu proje, *Playwright, **TypeScript* ve *Cucumber* framework'leri kullanılarak hazırlanan bir test otomasyon projesidir. Projeyi bilgisayarınıza kopyalayıp testleri sorunsuz bir şekilde koşturabilmek için aşağıdaki adımları sırasıyla takip etmeniz gerekmektedir.",
   "scripts": {
     "build": "tsc",
+    "setup": "npm ci && npx playwright install",
     "test": "playwright test",
     "test:cucumber": "cucumber-js",
     "allure:generate": "allure generate ./target/allure-results -o ./target/allure-report --clean",

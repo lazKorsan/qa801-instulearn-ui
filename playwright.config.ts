@@ -1,13 +1,70 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from 'dotenv';
+
 dotenv.config();
+
 // HEADLESS tanımlı değilse varsayılan olarak false kabul eder
 const isHeadless = process.env.HEADLESS ? process.env.HEADLESS === 'true' : false;
+
+// .env içinde BROWSER tanımlı değilse varsayılan olarak 'chromium' seçer
+const selectedBrowser = (process.env.BROWSER || 'chromium').toLowerCase();
+
+// Tüm tarayıcı profilleri
+const allProjects = [
+  {
+    name: 'chromium',
+    use: {
+      channel: 'chrome', // Sistemdeki kurulu Chrome'u kullanır
+      viewport: null,
+      launchOptions: {
+        args: [
+          '--start-maximized',
+          '--disable-notifications',
+          '--disable-popup-blocking',
+          '--disable-dev-shm-usage',
+          '--no-sandbox',
+          '--disable-extensions',
+          '--disable-blink-features=AutomationControlled',
+          '--force-device-scale-factor=1.0',
+          '--disable-search-engine-choice-screen',
+          '--lang=en-US',
+        ],
+      },
+    },
+  },
+  {
+    name: 'firefox',
+    use: {
+      ...devices['Desktop Firefox'],
+      viewport: { width: 1920, height: 1080 },
+      launchOptions: {
+        firefoxUserPrefs: {
+          'dom.webnotifications.enabled': false,
+          'intl.accept_languages': 'en-US, en',
+        },
+      },
+    },
+  },
+  {
+    name: 'webkit',
+    use: {
+      ...devices['Desktop Safari'],
+      viewport: { width: 1920, height: 1080 },
+    },
+  },
+];
+
+// BROWSER=all yazılırsa hepsini, aksi halde .env'de seçilen tek tarayıcıyı aktif eder
+const activeProjects =
+    selectedBrowser === 'all'
+        ? allProjects
+        : allProjects.filter((p) => p.name === selectedBrowser);
+
 export default defineConfig({
   testDir: './',
   testIgnore: [
     '**/node_modules/**',
-    '**/target/**',          // rapor/artifact klasörleri test olarak algılanmasın
+    '**/target/**', // rapor/artifact klasörleri test olarak algılanmasın
   ],
   testMatch: '**/*.spec.ts',
 
@@ -38,32 +95,11 @@ export default defineConfig({
   ],
 
   use: {
-    viewport: null,
     headless: isHeadless,
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
   },
 
-  projects: [
-    {
-      name: 'chromium',
-      use: {
-        viewport: null,
-        launchOptions: {
-          args: [
-            '--start-maximized',
-            '--disable-notifications',
-            '--disable-popup-blocking',
-            '--disable-dev-shm-usage',
-            '--no-sandbox',
-            '--disable-extensions',
-            '--disable-blink-features=AutomationControlled',
-            '--force-device-scale-factor=1.0',
-            '--disable-search-engine-choice-screen',
-            '--lang=en-US',
-          ],
-        },
-      },
-    },
-  ],
+  // Eğer .env'ye geçersiz bir isim yazılırsa güvenli fallback olarak chromium açar
+  projects: activeProjects.length > 0 ? activeProjects : [allProjects[0]],
 });
